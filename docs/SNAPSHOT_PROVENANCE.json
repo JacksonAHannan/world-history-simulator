@@ -1,0 +1,281 @@
+{
+  "snapshot_date": "2026-10-03",
+  "source_project": "World History Sim Project",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "4b541872b3fd3a765b59f7d1040a21513bebdeedcb280a8500d872360403012a",
+      "bytes": 118,
+      "original_sha256": "7d9ab9bc348c8957d1f447cbfc6588e6d4bab3dd9507acf71a5eaddc38274819",
+      "unchanged": false
+    },
+    {
+      "path": "MANIFEST.in",
+      "sha256": "f0ec3098ceedabd7cbdf6b33206522c0e4ef3dd4afae346d8bc56a59d4daaf60",
+      "bytes": 100,
+      "original_sha256": "81f2823409ee942d82b656da21cc86988983df2022d5b4fc7715a62d1d3746a6",
+      "unchanged": false
+    },
+    {
+      "path": "README.md",
+      "sha256": "be49d2b277a091e172a7d0ce5b3e6948584e883fec1566087257e32b30dd3f63",
+      "bytes": 4906,
+      "original_sha256": "8f9f3edf33bd29bbd50aad047933ae37c7858f7548591b51b2d854dc44ae87ac",
+      "unchanged": false
+    },
+    {
+      "path": "docs/MODEL.md",
+      "sha256": "b5dad419c7f0b8c72b7412366aa119480932a7557b16dde5eb2da3a1a504271c",
+      "bytes": 12627,
+      "original_sha256": "b5dad419c7f0b8c72b7412366aa119480932a7557b16dde5eb2da3a1a504271c",
+      "unchanged": true
+    },
+    {
+      "path": "docs/POPULATION.md",
+      "sha256": "5cdf05a2142d7ebc60b13e1fe1bb990fa06afc68a9ceb8b933c0aefca6aa43d2",
+      "bytes": 7510,
+      "original_sha256": "72bad3187f6f1254c7cbd40ae2984937c1acb6175db2d783208f8534da3db100",
+      "unchanged": false
+    },
+    {
+      "path": "docs/VERIFICATION.md",
+      "sha256": "06c0148e95598e85cd2d74109814c670f96e802ae6e7c3dad7ebbf16cf5bfaef",
+      "bytes": 2451,
+      "original_sha256": "39677ce7e57cbb3896360a71cf156f1bf84ec01844b3536a060ff8df569b4f3b",
+      "unchanged": false
+    },
+    {
+      "path": "docs/preview/atlas-browser.png",
+      "sha256": "14e266f72087e23250cdd83f751c4fa9ade744361b0877893f819d2d47a00029",
+      "bytes": 157800,
+      "origin": "publication preparation or documented preview"
+    },
+    {
+      "path": "docs/preview/atlas.png",
+      "sha256": "2745f6ac35300cbc6883cdf263bdaf15fdc31bece5e83ca99a7c0b145e73842c",
+      "bytes": 23339,
+      "origin": "publication preparation or documented preview"
+    },
+    {
+      "path": "docs/preview/atlas.svg",
+      "sha256": "9ef54aa7a33330f180e57bf5a946ea8d24e7ad9dd41c1ebaf5ef7279b97dd896",
+      "bytes": 47116,
+      "origin": "publication preparation or documented preview"
+    },
+    {
+      "path": "docs/preview/export-metadata.json",
+      "sha256": "a83a5a20480385c6170935432d6fccdd4014f8a5cf6e0a175a0d536af067f2bb",
+      "bytes": 1546,
+      "origin": "publication preparation or documented preview"
+    },
+    {
+      "path": "docs/preview/manifest.json",
+      "sha256": "34e8b2e25a1f1e48bddcd9447fd598fbcb0b1633765e645d818a6155a746fab3",
+      "bytes": 961,
+      "origin": "publication preparation or documented preview"
+    },
+    {
+      "path": "docs/specification.md",
+      "sha256": "ee5c72c357d1d326b5163207954d29ab46c93d03f5b08dd15854d72a22740afc",
+      "bytes": 32730,
+      "original_sha256": "ee5c72c357d1d326b5163207954d29ab46c93d03f5b08dd15854d72a22740afc",
+      "unchanged": true
+    },
+    {
+      "path": "launch-atlas.sh",
+      "sha256": "9c839e9560eb29862e985fb0c0a1640f72c293f7d29ab3aa23ee9ad9b445a444",
+      "bytes": 331,
+      "original_sha256": "9c839e9560eb29862e985fb0c0a1640f72c293f7d29ab3aa23ee9ad9b445a444",
+      "unchanged": true
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "e464a1ffdbbbd78b7a410fa73af7f4720ef99015b6d3ba3eb342f15f10c46791",
+      "bytes": 446,
+      "original_sha256": "e464a1ffdbbbd78b7a410fa73af7f4720ef99015b6d3ba3eb342f15f10c46791",
+      "unchanged": true
+    },
+    {
+      "path": "tests/test_application.py",
+      "sha256": "438aebae8d56cc05a69a37971266d91bd3dee66b9f0aae8033f02b216965fa73",
+      "bytes": 10570,
+      "original_sha256": "438aebae8d56cc05a69a37971266d91bd3dee66b9f0aae8033f02b216965fa73",
+      "unchanged": true
+    },
+    {
+      "path": "tests/test_engine.py",
+      "sha256": "4c6560024bcf440ee266544cc73744f1a98a699bf56cb22e8654ff95116b5c8e",
+      "bytes": 16866,
+      "original_sha256": "4c6560024bcf440ee266544cc73744f1a98a699bf56cb22e8654ff95116b5c8e",
+      "unchanged": true
+    },
+    {
+      "path": "tests/test_subsistence.py",
+      "sha256": "e4c8231de5b20d35f95cf9785f9c7c747e0cd158b6f4405d5c6140ef00c12c21",
+      "bytes": 10320,
+      "original_sha256": "e4c8231de5b20d35f95cf9785f9c7c747e0cd158b6f4405d5c6140ef00c12c21",
+      "unchanged": true
+    },
+    {
+      "path": "tools/benchmark.py",
+      "sha256": "a12828571a048f787e462ae1e72028c1a87f5e06ea6fa3c174f797f6701e1ae0",
+      "bytes": 3514,
+      "original_sha256": "a12828571a048f787e462ae1e72028c1a87f5e06ea6fa3c174f797f6701e1ae0",
+      "unchanged": true
+    },
+    {
+      "path": "tools/population_checks.py",
+      "sha256": "8f3d5e1b00830d2ef8b1e2e01de607ef858148cd0330cb463695303c733f0b4a",
+      "bytes": 3645,
+      "original_sha256": "8f3d5e1b00830d2ef8b1e2e01de607ef858148cd0330cb463695303c733f0b4a",
+      "unchanged": true
+    },
+    {
+      "path": "tools/scenarios.py",
+      "sha256": "59ead1d9f149e4cf821190718c05ded0b6980fa2a603377bca5e17a10b93559d",
+      "bytes": 3933,
+      "original_sha256": "59ead1d9f149e4cf821190718c05ded0b6980fa2a603377bca5e17a10b93559d",
+      "unchanged": true
+    },
+    {
+      "path": "tools/test_atlas.py",
+      "sha256": "5448b3b6544649afbd6cb9e191cbf49a484f3f3ccc342d60a3aa7747219f155b",
+      "bytes": 3506,
+      "original_sha256": "5448b3b6544649afbd6cb9e191cbf49a484f3f3ccc342d60a3aa7747219f155b",
+      "unchanged": true
+    },
+    {
+      "path": "worldsim/__init__.py",
+      "sha256": "bec8077f08abb4d005358f4895e8c67871c7e67e4bb0735bef107902cab066bc",
+      "bytes": 82,
+      "original_sha256": "bec8077f08abb4d005358f4895e8c67871c7e67e4bb0735bef107902cab066bc",
+      "unchanged": true
+    },
+    {
+      "path": "worldsim/__main__.py",
+      "sha256": "307299fda7b77d22c64cb51430ec75e5f59d78e9c948786afb3b2544fe45e4b7",
+      "bytes": 79,
+      "original_sha256": "307299fda7b77d22c64cb51430ec75e5f59d78e9c948786afb3b2544fe45e4b7",
+      "unchanged": true
+    },
+    {
+      "path": "worldsim/application.py",
+      "sha256": "a989151b07ba7e720f072eab8eefa462cbf746302314710ff3b1abea13c2b4a0",
+      "bytes": 16831,
+      "original_sha256": "a989151b07ba7e720f072eab8eefa462cbf746302314710ff3b1abea13c2b4a0",
+      "unchanged": true
+    },
+    {
+      "path": "worldsim/cli.py",
+      "sha256": "aa06a05432a5c839770d75b4459d5c7f6de340ccded67e208d9d5fbd22cde5ba",
+      "bytes": 6641,
+      "original_sha256": "aa06a05432a5c839770d75b4459d5c7f6de340ccded67e208d9d5fbd22cde5ba",
+      "unchanged": true
+    },
+    {
+      "path": "worldsim/config.py",
+      "sha256": "27d2a2da04b4d597b6f5bc3f21411d8f0e6e6877e6a483c6a2b2cea65eea0b5d",
+      "bytes": 8298,
+      "original_sha256": "27d2a2da04b4d597b6f5bc3f21411d8f0e6e6877e6a483c6a2b2cea65eea0b5d",
+      "unchanged": true
+    },
+    {
+      "path": "worldsim/engine.py",
+      "sha256": "6e228776b5f3ec6c0b12eb45f71a1286814858c549022f6871a2b53b988efa94",
+      "bytes": 30805,
+      "original_sha256": "6e228776b5f3ec6c0b12eb45f71a1286814858c549022f6871a2b53b988efa94",
+      "unchanged": true
+    },
+    {
+      "path": "worldsim/exporting.py",
+      "sha256": "d56da0d10474b03db2f961f43d1768c4f3a4412afe25d0ea6817ce6e57942e3e",
+      "bytes": 9220,
+      "original_sha256": "d56da0d10474b03db2f961f43d1768c4f3a4412afe25d0ea6817ce6e57942e3e",
+      "unchanged": true
+    },
+    {
+      "path": "worldsim/geography.py",
+      "sha256": "01be424b61a3c7ec2abf44d20bf66d115e9921b569a71ff31145f027942e2fb5",
+      "bytes": 11412,
+      "original_sha256": "01be424b61a3c7ec2abf44d20bf66d115e9921b569a71ff31145f027942e2fb5",
+      "unchanged": true
+    },
+    {
+      "path": "worldsim/initialization.py",
+      "sha256": "4f7292469b735eb6bca809075a621e102de392624e4302a0a6e582b9c615f0a5",
+      "bytes": 6521,
+      "original_sha256": "4f7292469b735eb6bca809075a621e102de392624e4302a0a6e582b9c615f0a5",
+      "unchanged": true
+    },
+    {
+      "path": "worldsim/linguistics.py",
+      "sha256": "72cc02430a5e21705cda07e86bd48028d6b041d93a31ac6772572a39317e4680",
+      "bytes": 6680,
+      "original_sha256": "72cc02430a5e21705cda07e86bd48028d6b041d93a31ac6772572a39317e4680",
+      "unchanged": true
+    },
+    {
+      "path": "worldsim/model.py",
+      "sha256": "e7592743b05874e0106ad8c615239d821b804e52a282b821a60c45c6cac27e29",
+      "bytes": 8292,
+      "original_sha256": "e7592743b05874e0106ad8c615239d821b804e52a282b821a60c45c6cac27e29",
+      "unchanged": true
+    },
+    {
+      "path": "worldsim/server.py",
+      "sha256": "1276b4d68aac5f13d017529a3cccaac0581d3a0779b2d3c1b1d06f28696e25fc",
+      "bytes": 14202,
+      "original_sha256": "1276b4d68aac5f13d017529a3cccaac0581d3a0779b2d3c1b1d06f28696e25fc",
+      "unchanged": true
+    },
+    {
+      "path": "worldsim/storage.py",
+      "sha256": "f2bce7b4caadc61601ba5f46cdf8aac8fe2271bd22b81f3c6a614d29eeccbdcc",
+      "bytes": 13901,
+      "original_sha256": "f2bce7b4caadc61601ba5f46cdf8aac8fe2271bd22b81f3c6a614d29eeccbdcc",
+      "unchanged": true
+    },
+    {
+      "path": "worldsim/systems.py",
+      "sha256": "803af8a47560e0c05203ab90b42fcb3795bae9f15c83ed2f3d5d439e7f30d117",
+      "bytes": 46380,
+      "original_sha256": "803af8a47560e0c05203ab90b42fcb3795bae9f15c83ed2f3d5d439e7f30d117",
+      "unchanged": true
+    },
+    {
+      "path": "worldsim/technology.py",
+      "sha256": "e34bf2f6e27f9ca277a00d149249be9cdd81330b3af64fe0a7bec0befc76c273",
+      "bytes": 5151,
+      "original_sha256": "e34bf2f6e27f9ca277a00d149249be9cdd81330b3af64fe0a7bec0befc76c273",
+      "unchanged": true
+    },
+    {
+      "path": "worldsim/web/atlas.css",
+      "sha256": "486bb8809a4f82c67f477a5ba064c0dc671e1c103d3dd1af173dede861562722",
+      "bytes": 15089,
+      "original_sha256": "486bb8809a4f82c67f477a5ba064c0dc671e1c103d3dd1af173dede861562722",
+      "unchanged": true
+    },
+    {
+      "path": "worldsim/web/atlas.js",
+      "sha256": "a98e0b30424266fe75159056f8750383e22bd81037a39ed6d27f0d2625ee081e",
+      "bytes": 39375,
+      "original_sha256": "a98e0b30424266fe75159056f8750383e22bd81037a39ed6d27f0d2625ee081e",
+      "unchanged": true
+    },
+    {
+      "path": "worldsim/web/index.html",
+      "sha256": "1062e04862d2b711a16fd9b2091c499c48348bef98a1aed53ee855a2009269d6",
+      "bytes": 8690,
+      "original_sha256": "1062e04862d2b711a16fd9b2091c499c48348bef98a1aed53ee855a2009269d6",
+      "unchanged": true
+    }
+  ],
+  "excluded": [
+    "credentials",
+    "working history",
+    "runtime state",
+    "downloaded corpora",
+    "build products"
+  ]
+}

@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "world-history-simulator"
+version = "0.1.0"
+description = "A reproducible local atlas of procedurally simulated histories"
+requires-python = ">=3.11"
+dependencies = ["numpy>=2.0,<3"]
+
+[project.scripts]
+worldsim = "worldsim.cli:main"
+
+[tool.setuptools.package-data]
+worldsim = ["web/*"]
+
+[tool.setuptools.packages.find]
+include = ["worldsim*"]

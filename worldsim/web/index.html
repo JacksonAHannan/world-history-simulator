@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#17334a"><title>World History Atlas</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='19' fill='%2317334a'/%3E%3Cpath d='M20 6L25 20L20 34L15 20Z' fill='%23daaf59'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/atlas.css"><script src="/atlas.js" defer></script>
+</head>
+<body>
+  <header class="app-header">
+    <a class="brand" href="/" aria-label="World History Atlas home"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18"/><path d="M20 5 25 20 20 35 15 20Z"/><path d="M5 20h30"/></svg><span>World History <b>Atlas</b></span></a>
+    <div class="world-select"><label for="run-select">World</label><select id="run-select" aria-label="Saved world"><option value="">No worlds yet</option></select></div>
+    <div class="header-actions"><button id="new-world" class="primary">Generate world</button><button id="export" disabled>Export</button><button id="about" class="icon-button" aria-label="About the model">?</button></div>
+  </header>
+
+  <main class="workbench">
+    <nav class="layers" aria-label="Map layers"><h2>Map layers</h2><div id="layer-buttons"></div><div class="model-note"><span class="status-dot"></span><span>Local, seeded simulation<br><button id="model-details" class="text-button">Model assumptions</button></span></div></nav>
+    <section class="atlas" aria-label="World atlas">
+      <div class="atlas-toolbar"><div><p id="world-meta" class="muted">Generate a world to begin</p><h1 id="date">A history waiting to happen</h1></div><div class="atlas-stats" id="stats"></div></div>
+      <div class="map-wrap" id="map-wrap"><canvas id="map" tabindex="0" aria-label="World map. Use search or the province list to select a region."></canvas>
+        <div class="map-top"><div class="search-box"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></svg><input id="search" type="search" placeholder="Find a place, language or polity" aria-label="Search entities" autocomplete="off"><div id="search-results" class="search-results" hidden></div></div><button id="reset-map" class="map-button" title="Reset map view">Fit world</button></div>
+        <div id="empty" class="empty-state"><svg viewBox="0 0 120 100" aria-hidden="true"><ellipse cx="60" cy="50" rx="52" ry="37"/><ellipse cx="60" cy="50" rx="25" ry="37"/><path d="M8 50h104M18 28h84M18 72h84"/></svg><h2>Begin with a world</h2><p>A seed creates the geography. Communities, contact and choices create its history.</p><button id="empty-generate" class="primary">Generate world</button></div>
+        <div id="tooltip" class="tooltip" hidden></div>
+        <div class="map-bottom"><div class="legend" id="legend"><span>Topography</span></div><div class="map-scale" id="map-scale">Equirectangular · polar caps excluded</div></div>
+        <div class="zoom-controls"><button id="zoom-in" aria-label="Zoom in">+</button><button id="zoom-out" aria-label="Zoom out">−</button></div>
+      </div>
+      <section class="time-panel" aria-label="Timeline controls"><div class="time-header"><div><h2>Through the years</h2><p id="timeline-caption" class="muted">Every year is saved and can be revisited.</p></div><div class="run-controls"><label for="advance-years">Advance</label><select id="advance-years"><option value="10">10 years</option><option value="100" selected>100 years</option><option value="500">500 years</option><option value="1000">1,000 years</option><option value="3000">3,000 years</option></select><button id="run" class="primary" disabled><span id="run-icon">▶</span> <span id="run-label">Run</span></button></div></div>
+        <canvas id="timeline-chart" aria-label="Global population through time"></canvas>
+        <label class="sr-only" for="year">Saved year offset</label><input id="year" type="range" min="0" max="0" value="0" step="1" disabled>
+        <div class="timeline-labels"><span id="first-year">Start</span><span id="view-year">Year 0</span><button id="latest-year" class="text-button">Latest saved year</button></div>
+        <div id="job-status" class="job-status" role="status" hidden></div>
+      </section>
+    </section>
+    <aside class="dossier" aria-label="Entity dossier"><div class="dossier-tabs" role="tablist" aria-label="Atlas detail"><button id="inspect-tab" role="tab" aria-selected="true">Inspect</button><button id="history-tab" role="tab" aria-selected="false">History</button><button id="compare-tab" role="tab" aria-selected="false">Compare</button></div><div id="dossier-content" class="dossier-content"><div class="dossier-intro"><h2>Follow a place through time</h2><p>Select a region on the map, or search for a language or polity. Its residents, resources and recorded events appear here.</p></div></div></aside>
+  </main>
+  <div id="toast" class="toast" role="status" hidden></div>
+
+  <dialog id="generate-dialog"><form id="generate-form"><div class="dialog-heading"><h2>Generate a world</h2><button type="button" class="close-dialog" aria-label="Close">×</button></div><p>Choose a starting point. The same settings reproduce the same world.</p><label for="seed">World seed</label><div class="seed-row"><input id="seed" name="seed" type="number" min="0" max="9007199254740991" step="1" value="42" required><button id="random-seed" type="button">Randomize</button></div><label for="preset">Preset</label><select id="preset" name="preset"><option value="balanced">Balanced world</option><option value="river-corridor">Fertile river corridors</option><option value="modern-capable">Modern-capable conditions</option></select><p class="field-note" id="preset-note">Unscripted histories on an Earth-like world.</p><label for="provinces">Land provinces</label><select id="provinces" name="provinces"><option value="240">240 · quick exploration</option><option value="800" selected>800 · detailed atlas</option><option value="2000">2,000 · reference world</option></select><label for="start-year">Starting year</label><input id="start-year" name="start_year" type="number" value="-9000" min="-20000" max="10000" required><p class="field-note">Negative years are BCE. The calendar has no year zero.</p><div class="dialog-actions"><button type="button" class="close-dialog">Cancel</button><button id="generate-submit" class="primary" type="submit">Generate world</button></div></form></dialog>
+
+  <dialog id="branch-dialog"><form id="branch-form"><div class="dialog-heading"><h2>Branch this history</h2><button type="button" class="close-dialog" aria-label="Close">×</button></div><p id="branch-context"></p><label for="intervention-kind">Change</label><select id="intervention-kind"><option value="travel_cost">Travel cost around this region</option><option value="drought_severity">Drought severity in this region</option></select><label for="intervention-factor">Multiply by</label><select id="intervention-factor"><option value="0.5">0.5 · halve it</option><option value="0.75">0.75 · reduce it by a quarter</option><option value="1.5">1.5 · increase it by half</option><option value="2">2 · double it</option></select><p class="callout">Branches retain the same random streams. Downstream differences are scenario results, not identified causal effects.</p><div class="dialog-actions"><button type="button" class="close-dialog">Cancel</button><button type="submit" class="primary">Create branch</button></div></form></dialog>
+
+  <dialog id="model-dialog"><div class="dialog-heading"><h2>About this model</h2><button class="close-dialog" aria-label="Close">×</button></div><p>This is an exploratory worldbuilding tool. It generates fictional histories from geography, food, human-like cohorts, social institutions and contact.</p><p>History is conditional. There are no dated technology unlocks, predetermined empires or inherited advantages for communities. Political control, language, identity and belief are separate.</p><p>Population and stocks are accounted for every year. Every history entry links to a recorded event and its conditions. Climate, fiscal values, conflict and language similarity use coarse model rules.</p><p>External historical calibration and expert review have not been performed. The atlas reports engine counts and explicitly labeled estimates.</p><div id="geography-report"></div></dialog>
+
+  <dialog id="event-dialog"><div class="dialog-heading"><h2>Recorded event</h2><button class="close-dialog" aria-label="Close">×</button></div><div id="event-content"></div></dialog>
+</body>
+</html>
